@@ -3,6 +3,7 @@
 import FilmsGrid from "@/app/components/FilmsGrid";
 import Navbar from "@/app/components/Navbar";
 import { ChangeEvent, useEffect, useState } from "react";
+import { getApiUrl } from "../utils/functions";
 
 export default function Page() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -11,7 +12,7 @@ export default function Page() {
 
   useEffect(() => {
     const fetchTotalPages = async () => {
-      const response = await fetch(`http://localhost:8080/movies/page?page=0`);
+      const response = await fetch(`${getApiUrl()}/movies/page?page=0`);
       const data = await response.json();
       setTotalPages(data.totalPages);
     };

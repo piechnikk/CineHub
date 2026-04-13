@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
+import { getApiUrl } from "../utils/functions";
 
 //TODO: refactor with trending movies
 
@@ -22,7 +23,7 @@ export default function FilmsGrid({
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/movies/page?page=${page}&name=${search}`);
+        const response = await fetch(`${getApiUrl()}/movies/page?page=${page}&name=${search}`);
         if (!response.ok) {
           throw new Error("Failed to fetch movies");
         }

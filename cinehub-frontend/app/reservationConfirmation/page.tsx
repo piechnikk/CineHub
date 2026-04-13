@@ -7,6 +7,7 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import SeatComponent from "../components/Seat";
 import { useRequireAuth } from "../hooks/useRequireAuth";
+import { getApiUrl } from "../utils/functions";
 
 export default function Reservation() {
   const router = useRouter();
@@ -29,7 +30,7 @@ export default function Reservation() {
 
   useEffect(() => {
     async function fetchDiscounts() {
-      const res = await fetch(`http://localhost:8080/discounts`);
+      const res = await fetch(`${getApiUrl()}/discounts`);
       const data = await res.json();
 
       setDiscounts(data);
@@ -45,7 +46,7 @@ export default function Reservation() {
   }, []);
 
   const handlePay = async () => {
-    const res = await fetch(`http://localhost:8080/tickets/pay`, {
+    const res = await fetch(`${getApiUrl()}/tickets/pay`, {
       method: "put",
       body: JSON.stringify(tickets),
       credentials: "include",
@@ -64,7 +65,7 @@ export default function Reservation() {
   };
 
   const handleCancel = async () => {
-    const res = await fetch(`http://localhost:8080/tickets/cancel`, {
+    const res = await fetch(`${getApiUrl()}/tickets/cancel`, {
       method: "put",
       body: JSON.stringify(tickets),
       credentials: "include",

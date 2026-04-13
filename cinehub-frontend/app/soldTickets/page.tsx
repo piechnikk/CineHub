@@ -3,7 +3,7 @@
 import { redirect, useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
-import { getMovieDetails } from "@/app/utils/functions";
+import { getApiUrl, getMovieDetails } from "@/app/utils/functions";
 import { MovieResponse } from "@/app/types/interfaces";
 import Navbar from "@/app/components/Navbar";
 import {
@@ -51,7 +51,7 @@ export default function Page() {
     async function fetchMovieStatistics() {
       try {
         const response = await fetch(
-          `http://localhost:8080/statistics/soldTickets/${movieId}`,
+          `${getApiUrl()}/statistics/soldTickets/${movieId}`,
         );
         const data = await response.json();
         const formattedData = Object.entries(data).map(([date, tickets]) => ({

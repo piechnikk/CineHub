@@ -8,15 +8,15 @@ export const validationRules = {
   },
   password: {
     required: "Password is required",
-    minLength: {
-      value: 6,
-      message: "Password must be at least 6 characters",
-    },
-    pattern: {
-      value: /^(?=.*[A-Z])(?=.*\d).+$/,
-      message:
-        "Password must contain at least one uppercase letter and one number",
-    },
+    // minLength: {
+    //   value: 6,
+    //   message: "Password must be at least 6 characters",
+    // },
+    // pattern: {
+    //   value: /^(?=.*[A-Z])(?=.*\d).+$/,
+    //   message:
+    //     "Password must contain at least one uppercase letter and one number",
+    // },
   },
   name: {
     required: "Full name is required",

@@ -1,0 +1,44 @@
+services:
+  db:
+    image: postgres:15
+    container_name: cinehub-postgres
+    environment:
+      POSTGRES_DB: cinehub
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./cinehub-backend
+    container_name: cinehub-backend
+    environment:
+      DB_HOST: db
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/cinehub
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./cinehub-frontend
+    container_name: cinehub-frontend
+    environment:
+      - API_URL=http://backend:8080
+      - NEXT_PUBLIC_API_URL=http://localhost:8080
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

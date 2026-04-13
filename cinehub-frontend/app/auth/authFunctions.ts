@@ -1,5 +1,7 @@
+import { getApiUrl } from "../utils/functions";
+
 export async function getRole() {
-  const res = await fetch(`http://localhost:8080/verifySession`, {
+  const res = await fetch(`${getApiUrl()}/verifySession`, {
     credentials: "include",
   });
 

@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useRequireAuth } from "../hooks/useRequireAuth";
+import { getApiUrl } from "../utils/functions";
 
 export default function Reservation() {
   const [reservation, setReservation] = useState<{
@@ -34,12 +35,12 @@ export default function Reservation() {
     async function fetchSeats() {
       if (reservation?.room.roomId) {
         const res = await fetch(
-          `http://localhost:8080/room/seats/${reservation.room.roomId}`,
+          `${getApiUrl()}/room/seats/${reservation.room.roomId}`,
         );
         const data = await res.json();
 
         const res1 = await fetch(
-          `http://localhost:8080/screenings/${reservation.screeningId}/takenSeats`,
+          `${getApiUrl()}/screenings/${reservation.screeningId}/takenSeats`,
         );
         const data1: Seat[] = await res1.json();
 
@@ -72,7 +73,7 @@ export default function Reservation() {
       });
     });
 
-    const res = await fetch(`http://localhost:8080/tickets`, {
+    const res = await fetch(`${getApiUrl()}/tickets`, {
       method: "POST",
       body: JSON.stringify(tickets),
       credentials: "include",

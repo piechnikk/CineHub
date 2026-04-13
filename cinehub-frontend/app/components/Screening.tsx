@@ -1,7 +1,7 @@
 "use client";
 
 import { MovieResponse } from "@/app/types/interfaces";
-import { formatDate } from "@/app/utils/functions";
+import { formatDate, getApiUrl } from "@/app/utils/functions";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Select from "react-select";
@@ -24,7 +24,7 @@ interface Screening {
 
 export default function Screening({ id }: { id: number }) {
   const { data: screeningResponse } = useSWR<Screening[]>(
-    `http://localhost:8080/screenings?movieId=${id}`,
+    `${getApiUrl()}/screenings?movieId=${id}`,
     fetcher,
   );
   const [selectedDate, setSelectedDate] = useState<string>("");

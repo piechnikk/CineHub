@@ -1,6 +1,8 @@
 import MovieInfo from "@/app/components/MovieInfo";
 import Navbar from "@/app/components/Navbar";
 
+export const dynamic = "force-dynamic";
+
 export default async function MoviePage({
   params,
 }: {

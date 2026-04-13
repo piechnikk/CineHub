@@ -31,26 +31,26 @@ public class ScreeningConfigurator {
     @PostConstruct
     public void init() {
         if (screeningRepository.count() == 0) {
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2024, 12, 23));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2024, 12, 24));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2024, 12, 25));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2024, 12, 26));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2024, 12, 27));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2024, 12, 28));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2024, 12, 29));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2024, 12, 30));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2024, 12, 31));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2025, 1, 1));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2025, 1, 2));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2025, 1, 3));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2025, 1, 4));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2025, 1, 5));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2025, 1, 6));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2025, 1, 7));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2025, 1, 8));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2025, 1, 9));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2025, 1, 10));
-            createMultipleScreenings("Carry-On", "101", 20, LocalDate.of(2025, 1, 11));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2026, 12, 23));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2026, 12, 24));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2026, 12, 25));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2026, 12, 26));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2026, 12, 27));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2026, 12, 28));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2026, 12, 29));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2026, 12, 30));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2026, 12, 31));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2027, 1, 1));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2027, 1, 2));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2027, 1, 3));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2027, 1, 4));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2027, 1, 5));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2027, 1, 6));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2027, 1, 7));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2027, 1, 8));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2027, 1, 9));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2027, 1, 10));
+            createMultipleScreenings("GOAT", "101", 20, LocalDate.of(2027, 1, 11));
         }
     }
 

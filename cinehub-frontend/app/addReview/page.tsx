@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 import Navbar from "../components/Navbar";
 import Loading from "../loading";
 import { MovieResponse } from "../types/interfaces";
-import { getMovieDetails } from "../utils/functions";
+import { getMovieDetails, getApiUrl } from "../utils/functions";
 
 export default function AddReview() {
   const searchParams = useSearchParams();
@@ -43,7 +43,7 @@ export default function AddReview() {
       return;
     }
 
-    const res = await fetch("http://localhost:8080/reviews", {
+    const res = await fetch(`${getApiUrl()}/reviews`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",

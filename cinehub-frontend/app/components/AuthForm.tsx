@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { toast  } from "react-hot-toast";
 import { useRequireAuth } from "../hooks/useRequireAuth";
+import { getApiUrl } from "../utils/functions";
 
 type FormValues = {
   [key: string]: string;
@@ -34,7 +35,7 @@ export default function AuthForm({
     formData.append("username", data["email"]);
     formData.append("password", data["password"]);
 
-    const res = await fetch(`http://localhost:8080/login`, {
+    const res = await fetch(`${getApiUrl()}/login`, {
       method: "post",
       credentials: "include",
       body: formData,
@@ -56,7 +57,7 @@ export default function AuthForm({
       password: data["password"],
     };
 
-    const res = await fetch(`http://localhost:8080/register`, {
+    const res = await fetch(`${getApiUrl()}/register`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",

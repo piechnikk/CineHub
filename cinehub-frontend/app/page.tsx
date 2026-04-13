@@ -4,6 +4,8 @@ import TrendingFilms from "@/app/components/TrendingFilms";
 import { MovieResponse } from "@/app/types/interfaces";
 import { getTrendingFilms } from "@/app/utils/functions";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const trending: MovieResponse[] = await getTrendingFilms();
 

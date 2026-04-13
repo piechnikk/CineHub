@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { convertToHours, getMovieDetails } from "@/app/utils/functions";
+import { convertToHours, getApiUrl, getMovieDetails } from "@/app/utils/functions";
 import { MovieResponse } from "@/app/types/interfaces";
 import Screening from "@/app/components/Screening";
 
 export default async function MovieInfo({ id }: { id: number }) {
   const movie: MovieResponse = await getMovieDetails(id);
-  const rating = await fetch(`http://localhost:8080/reviews/rating/${id}`).then(
+  const rating = await fetch(`${getApiUrl()}/reviews/rating/${id}`).then(
     (res) => (res.ok ? res.json() : "--"),
   );
 

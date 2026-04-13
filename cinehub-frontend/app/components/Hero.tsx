@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { MovieResponse } from "@/app/types/interfaces";
-import { convertToHours } from "@/app/utils/functions";
+import { convertToHours, getApiUrl } from "@/app/utils/functions";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import useSWR from "swr";
 import { fetcher } from "@/app/utils/fetcher";
@@ -15,7 +15,7 @@ export default function Hero(props: MovieResponse) {
   };
 
   const { data, error } = useSWR(
-    "http://localhost:8080/reviews/rating/" + props.movieId,
+    `${getApiUrl()}/reviews/rating/` + props.movieId,
     fetcher,
   );
 
