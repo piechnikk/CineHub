@@ -1,6 +1,5 @@
 package com.agh.cinehub_backend.service;
 
-import com.agh.cinehub_backend.model.DailyTicketsStatistics;
 import com.agh.cinehub_backend.model.Movie;
 import com.agh.cinehub_backend.repository.DailyTicketsStatisticsRepository;
 import com.agh.cinehub_backend.repository.MovieRepository;
@@ -82,7 +81,7 @@ public class StatisticsService {
 //                ));
 
 
-        LocalDate today = LocalDate.now();
+        // LocalDate today = LocalDate.now();
 //        return IntStream.rangeClosed(0, 13)
 //                .mapToObj(today::minusDays)
 //                .collect(Collectors.toMap(

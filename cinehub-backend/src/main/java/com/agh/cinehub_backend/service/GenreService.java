@@ -6,8 +6,6 @@ import com.agh.cinehub_backend.model.Tmdb;
 import com.agh.cinehub_backend.repository.GenreRepository;
 import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.event.EventListener;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;

@@ -6,19 +6,15 @@ import com.agh.cinehub_backend.model.Review;
 import com.agh.cinehub_backend.model.User;
 import com.agh.cinehub_backend.repository.MovieRepository;
 import com.agh.cinehub_backend.repository.ReviewRepository;
-import com.agh.cinehub_backend.repository.UserRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @AllArgsConstructor
 public class ReviewService {
     private final ReviewRepository reviewRepository;
-    private final UserRepository userRepository;
     private final MovieRepository movieRepository;
 
     public void addReview(User user, ReviewRequest request) {

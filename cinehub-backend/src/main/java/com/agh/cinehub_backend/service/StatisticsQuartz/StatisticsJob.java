@@ -1,9 +1,7 @@
 package com.agh.cinehub_backend.service.StatisticsQuartz;
 
 import com.agh.cinehub_backend.model.Movie;
-import com.agh.cinehub_backend.repository.MovieRepository;
 import com.agh.cinehub_backend.repository.TicketRepository;
-import com.agh.cinehub_backend.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
@@ -16,8 +14,6 @@ import java.util.stream.Collectors;
 @Component
 @AllArgsConstructor
 public class StatisticsJob implements Job {
-    private final UserRepository userRepository;
-    private final MovieRepository movieRepository;
     private final TicketRepository ticketRepository;
 
     private final StatisticsStorage statisticsStorage;

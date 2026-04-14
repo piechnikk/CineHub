@@ -3,7 +3,6 @@ package com.agh.cinehub_backend.service;
 import com.agh.cinehub_backend.DTO.ScreeningRequest;
 import com.agh.cinehub_backend.model.*;
 import com.agh.cinehub_backend.repository.*;
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +16,6 @@ public class ScreeningService {
     private final MovieRepository movieRepository;
     private final RoomRepository roomRepository;
     private final TicketRepository ticketRepository;
-    private final SeatRepository seatRepository;
 
     public void addScreening(ScreeningRequest request) {
         Room room = roomRepository.findByName(request.getRoomName()).orElseThrow(() -> new IllegalArgumentException("Room not found"));

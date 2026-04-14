@@ -3,7 +3,6 @@ package com.agh.cinehub_backend.configurator;
 import com.agh.cinehub_backend.model.Role;
 import com.agh.cinehub_backend.repository.RoleRepository;
 import jakarta.annotation.PostConstruct;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration

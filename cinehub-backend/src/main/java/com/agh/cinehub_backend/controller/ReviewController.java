@@ -9,7 +9,6 @@ import com.agh.cinehub_backend.service.ReviewService;
 import com.agh.cinehub_backend.service.UserService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
-import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;

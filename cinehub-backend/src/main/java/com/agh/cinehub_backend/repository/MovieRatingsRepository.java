@@ -1,6 +1,5 @@
 package com.agh.cinehub_backend.repository;
 
-import com.agh.cinehub_backend.model.Movie;
 import com.agh.cinehub_backend.model.MovieRating;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -5,7 +5,6 @@ import com.agh.cinehub_backend.model.Movie;
 import com.agh.cinehub_backend.repository.GenreRepository;
 import com.agh.cinehub_backend.repository.MovieRepository;
 import com.agh.cinehub_backend.service.MovieService;
-import jakarta.annotation.PostConstruct;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.EventListener;

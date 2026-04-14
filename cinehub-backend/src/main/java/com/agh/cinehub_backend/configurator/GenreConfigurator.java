@@ -3,7 +3,6 @@ package com.agh.cinehub_backend.configurator;
 import com.agh.cinehub_backend.model.Genre;
 import com.agh.cinehub_backend.repository.GenreRepository;
 import com.agh.cinehub_backend.service.GenreService;
-import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.annotation.Configuration;

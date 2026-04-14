@@ -1,9 +1,7 @@
 package com.agh.cinehub_backend.controller;
 
-import com.agh.cinehub_backend.model.DailyTicketsStatistics;
 import com.agh.cinehub_backend.model.Movie;
 import com.agh.cinehub_backend.model.MovieRating;
-import com.agh.cinehub_backend.repository.MovieRatingsRepository;
 import com.agh.cinehub_backend.service.MovieRatingsService;
 import com.agh.cinehub_backend.service.StatisticsService;
 import lombok.AllArgsConstructor;
